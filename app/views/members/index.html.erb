@@ -1,0 +1,77 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth date</th>
+      <th>Address</th>
+      <th>Complement</th>
+      <th>Phone</th>
+      <th>Cell phone</th>
+      <th>Marital status</th>
+      <th>Conjugate</th>
+      <th>Sex</th>
+      <th>Cpf</th>
+      <th>Rg</th>
+      <th>Profession</th>
+      <th>Workplace</th>
+      <th>Member</th>
+      <th>Congregated</th>
+      <th>Water baptism date</th>
+      <th>Role</th>
+      <th>Ebd</th>
+      <th>Baptized</th>
+      <th>Date baptism</th>
+      <th>Father name</th>
+      <th>Mother name</th>
+      <th>Congregation</th>
+      <th>Dizymist</th>
+      <th>Affiliated missions</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.birth_date %></td>
+        <td><%= member.address %></td>
+        <td><%= member.complement %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.cell_phone %></td>
+        <td><%= member.marital_status %></td>
+        <td><%= member.conjugate %></td>
+        <td><%= member.sex %></td>
+        <td><%= member.cpf %></td>
+        <td><%= member.rg %></td>
+        <td><%= member.profession %></td>
+        <td><%= member.workplace %></td>
+        <td><%= member.member %></td>
+        <td><%= member.congregated %></td>
+        <td><%= member.water_baptism_date %></td>
+        <td><%= member.role %></td>
+        <td><%= member.ebd %></td>
+        <td><%= member.baptized %></td>
+        <td><%= member.date_baptism %></td>
+        <td><%= member.father_name %></td>
+        <td><%= member.mother_name %></td>
+        <td><%= member.congregation %></td>
+        <td><%= member.dizymist %></td>
+        <td><%= member.affiliated_missions %></td>
+        <td><%= member.description %></td>
+        <td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Edit', edit_member_path(member) %></td>
+        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_member_path %>

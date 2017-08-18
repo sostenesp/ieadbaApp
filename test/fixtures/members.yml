@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birth_date: MyString
+  address: MyString
+  complement: MyString
+  phone: MyString
+  cell_phone: MyString
+  marital_status: MyString
+  conjugate: MyString
+  sex: MyString
+  cpf: MyString
+  rg: MyString
+  profession: MyString
+  workplace: MyString
+  member: MyString
+  congregated: MyString
+  water_baptism_date: MyString
+  role: MyString
+  ebd: MyString
+  baptized: MyString
+  date_baptism: MyString
+  father_name: MyString
+  mother_name: MyString
+  congregation: MyString
+  dizymist: MyString
+  affiliated_missions: MyString
+  description: MyString
+
+two:
+  name: MyString
+  birth_date: MyString
+  address: MyString
+  complement: MyString
+  phone: MyString
+  cell_phone: MyString
+  marital_status: MyString
+  conjugate: MyString
+  sex: MyString
+  cpf: MyString
+  rg: MyString
+  profession: MyString
+  workplace: MyString
+  member: MyString
+  congregated: MyString
+  water_baptism_date: MyString
+  role: MyString
+  ebd: MyString
+  baptized: MyString
+  date_baptism: MyString
+  father_name: MyString
+  mother_name: MyString
+  congregation: MyString
+  dizymist: MyString
+  affiliated_missions: MyString
+  description: MyString
