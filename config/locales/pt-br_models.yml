@@ -1,0 +1,34 @@
+"pt-BR":
+  activerecord:
+    models:
+      member: Membros
+    attributes:
+      member:
+        id: "Código"
+        name: "NOME"
+        birth_date: "DATA DE NASCIMENTO"
+        address: "ENDEREÇO"
+        complement: "COMPLEMENTO"
+        phone: "TELEDONE"
+        cell_phone: "CELULAR"
+        marital_status: "ESTADO CIVIL"
+        conjugate: "CONJUGE"
+        sex: "SEXO"
+        cpf: "CPF"
+        rg: "RG"
+        profession: "PROFISSÃO"
+        workplace: "LOCAL DE TRABALHO"
+        member: "É MEMBRO?"
+        congregated: "CONGREGADO?"
+        water_baptism_date: "DATA DE BATISMO NAS ÁGUAS"
+        role: "CARGO"
+        ebd: "É MATRICULADO EBD?"
+        baptized: "BATIZADO NO ESPIRITO SANTO?"
+        date_baptism: "DATA BATISMO"
+        father_name: "NOME DO PAI"
+        mother_name: "NOME DA MÃE"
+        congregation: "CONGREGAÇÃO"
+        dizymist: "É DIZIMISTA?"
+        affiliated_missions: "É FILIADO A MISSÕES"
+        description: "SE NÃO TEM CARGOS NA IGREJA, QUAIS AS ATIVIDADES QUE PARTICIPA?"
+ 
