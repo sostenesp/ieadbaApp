@@ -45,3 +45,10 @@
 <!-- /carteira -->
 <% end %>
 <!-- lista de menbros -->
+
+<!-- paginação -->
+<div class="clearfix"></div>
+<div class="text-center">
+  <%= will_paginate @cadastros, renderer: BootstrapPagination::Rails %>
+</div>
+<!-- /paginação -->
