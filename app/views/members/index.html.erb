@@ -2,9 +2,11 @@
 <div class="jumbotron">
   <form action="">
     <div class="input-group">
-      <input type="text" class="form-control input-lg" placeholder="Pesquisar carteira...">
+      <%= search_form_for @q do |f| %>
+        <%= f.search_field :name_cont, class: 'form-control input-lg', placeholder: 'Pesquisar por Nome do Membro...' %>
+      <% end %>
       <span class="input-group-btn">
-        <button class="btn btn-primary btn-lg" type="submit"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
+        <button class="btn btn-primary btn-lg" type="submit"> Buscar</span> </button>
       </span>
     </div>
   </form>
@@ -24,11 +26,11 @@
          <%= image_tag member.avatar.url(:thumb), class: 'img-circle' %>
       </div>
       <div class="media-body">
-        <h4 class="media-heading"><%= member.name %></h4>
-        <strong><%=t :id %>: </strong> <%= "%.4d" % member.id %> <br>
-        <strong><%=t :role %>:</strong> <%= member.role %> <br>
-        <strong><%=t :congregation %>:</strong> <%= member.congregation %> <br>
-        <strong><%=t :phone %>:</strong> <%= member.cell_phone %> <br>
+        <h4 class="media-heading"><%= member.name.upcase %></h4>
+        <strong><%= sort_link(@q, :id)%>: </strong> <%= "%.4d" % member.id %> <br>
+        <strong><%= sort_link(@q, :role)%>:</strong> <%= member.role %> <br>
+        <strong><%= sort_link(@q, :congregation)%>:</strong> <%= member.congregation %> <br>
+        <strong><%= sort_link(@q, :phone)%>:</strong> <%= member.phone %> <br>
         <p>
           <div class="btn-group btn-group-xs" role="group">
             <%= link_to 'Visualizar', member, class: 'btn btn-primary' %>
