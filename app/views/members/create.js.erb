@@ -1,0 +1,9 @@
+var qtdErrors = <%= @member.errors.count %>;
+
+
+if (qtdErrors > 0) {
+  $.notify("Problema com cadastro. Verifique seus dados.", "error");
+} else{
+  $.notify("Membro Cadastrado com Sucesso!", "success");
+  $("#member_name").val("");
+}
