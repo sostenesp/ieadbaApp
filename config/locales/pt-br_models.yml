@@ -1,4 +1,33 @@
 "pt-BR":
+  hello: "ola"
+  id: "Código"
+  name: "Nome"
+  birth_date: "Data de Nascimento"
+  address: "endereço"
+  complement: "Complemento"
+  phone: "Teledone"
+  cell_phone: "Celular"
+  marital_status: "Estado Civil"
+  conjugate: "Conjuge"
+  sex: "Sexo"
+  cpf: "CPF"
+  rg: "RG"
+  profession: "Profissão"
+  workplace: "Local de Trabalho"
+  member: "Membro"
+  congregated: "Congregado"
+  water_baptism_date: "DATA DE BATISMO NAS ÁGUAS"
+  role: "Cargo"
+  ebd: "É MATRICULADO EBD?"
+  baptized: "BATIZADO NO ESPIRITO SANTO?"
+  date_baptism: "DATA BATISMO"
+  father_name: "NOME DO PAI"
+  mother_name: "NOME DA MÃE"
+  congregation: "congregação"
+  dizymist: "É DIZIMISTA?"
+  affiliated_missions: "É FILIADO A MISSÕES"
+  description: "SE NÃO TEM CARGOS NA IGREJA, QUAIS AS ATIVIDADES QUE PARTICIPA?"
+  
   activerecord:
     models:
       member: Membros

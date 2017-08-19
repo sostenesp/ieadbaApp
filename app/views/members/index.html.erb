@@ -1,77 +1,47 @@
+<!-- campo de pesquisa -->
+<div class="jumbotron">
+  <form action="">
+    <div class="input-group">
+      <input type="text" class="form-control input-lg" placeholder="Pesquisar carteira...">
+      <span class="input-group-btn">
+        <button class="btn btn-primary btn-lg" type="submit"> <span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
+      </span>
+    </div>
+  </form>
+</div>
+<!-- /campo de pesquisa -->
+
+<!-- flash notices -->
 <p id="notice"><%= notice %></p>
 
-<h1>Members</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Birth date</th>
-      <th>Address</th>
-      <th>Complement</th>
-      <th>Phone</th>
-      <th>Cell phone</th>
-      <th>Marital status</th>
-      <th>Conjugate</th>
-      <th>Sex</th>
-      <th>Cpf</th>
-      <th>Rg</th>
-      <th>Profession</th>
-      <th>Workplace</th>
-      <th>Member</th>
-      <th>Congregated</th>
-      <th>Water baptism date</th>
-      <th>Role</th>
-      <th>Ebd</th>
-      <th>Baptized</th>
-      <th>Date baptism</th>
-      <th>Father name</th>
-      <th>Mother name</th>
-      <th>Congregation</th>
-      <th>Dizymist</th>
-      <th>Affiliated missions</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><%= member.name %></td>
-        <td><%= member.birth_date %></td>
-        <td><%= member.address %></td>
-        <td><%= member.complement %></td>
-        <td><%= member.phone %></td>
-        <td><%= member.cell_phone %></td>
-        <td><%= member.marital_status %></td>
-        <td><%= member.conjugate %></td>
-        <td><%= member.sex %></td>
-        <td><%= member.cpf %></td>
-        <td><%= member.rg %></td>
-        <td><%= member.profession %></td>
-        <td><%= member.workplace %></td>
-        <td><%= member.member %></td>
-        <td><%= member.congregated %></td>
-        <td><%= member.water_baptism_date %></td>
-        <td><%= member.role %></td>
-        <td><%= member.ebd %></td>
-        <td><%= member.baptized %></td>
-        <td><%= member.date_baptism %></td>
-        <td><%= member.father_name %></td>
-        <td><%= member.mother_name %></td>
-        <td><%= member.congregation %></td>
-        <td><%= member.dizymist %></td>
-        <td><%= member.affiliated_missions %></td>
-        <td><%= member.description %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Member', new_member_path %>
+<!-- lista de menbros -->
+<% @members.each do |member| %>
+<!-- carteira -->
+<div class="col-md-6">
+  <div class="carteira">
+    <div class="media">
+      <div class="media-left media-middle">
+         <img media-object src="http://via.placeholder.com/80x80" alt="foto" class="img-circle">
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= member.name %></h4>
+        <strong><%=t :id %>: </strong> <%= "%.4d" % member.id %> <br>
+        <strong><%=t :role %></strong> <%= member.role %> <br>
+        <strong><%=t :congregation %></strong> <%= member.congregation %> <br>
+        <strong><%=t :phone %></strong> <%= member.cell_phone %> <br>
+        <p>
+          <div class="btn-group btn-group-xs" role="group">
+            <%= link_to 'Visualizar', member, class: 'btn btn-primary' %>
+            <%= link_to 'Editar', edit_member_path(member), class: 'btn btn-primary' %>
+            <%= link_to 'Imprimir', '#', class: 'btn btn-primary' %>
+            <%= link_to 'Excluir', member, method: :delete, data: { confirm: 'Você deseja realmente Excluir?' }, class: 'btn btn-danger' %>
+            <!-- <a href="imprimir.html" class="btn btn-default" target="_blank">Imprimir</a> -->
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /carteira -->
+<% end %>
+<!-- lista de menbros -->

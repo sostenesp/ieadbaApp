@@ -1,0 +1,107 @@
+/* custom css */
+
+/* customizer navbar header */
+
+.navbar-default {
+	border: 0 none;
+	border-radius: 0;
+}
+
+.navbar-default .nav {
+ 	padding: 10px 0;
+}
+
+.navbar-default .navbar-brand {
+  padding: 0 15px;
+}
+
+.navbar-default .navbar-brand img {
+  height: 50px;
+}
+
+@media(min-width:768px) {
+  .navbar-default .navbar-brand {
+    padding: 10px 30px 10px 0;
+  }
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #337ab7;  /*Sets the text hover color on navbar*/
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-fixed .navbar-nav > .active > a:focus {
+  color: #fff; /*BACKGROUND color for active*/
+  background: #337ab7;
+}
+
+.navbar-default {
+  background-color: #0f006f;
+  border-color: #030033;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #fff;
+ 	text-decoration: none;
+	background-color: #337ab7;  /*change color of links in drop down here*/
+ }
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #337ab7; /*Change rollover cell color here*/
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white; /*Change active text color here*/
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+.jumbotron {
+	padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+.jumbotron h2 {
+	margin: 0;
+}
+/*
+.form-horizontal .checkbox,
+.form-horizontal .checkbox-inline,
+.form-horizontal .radio,
+.form-horizontal .radio-inline {
+	padding-top: 32px;
+}*/
+
+.carteira {
+	margin-bottom: 25px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
