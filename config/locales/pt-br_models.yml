@@ -1,11 +1,10 @@
 "pt-BR":
-  hello: "ola"
   id: "Código"
   name: "Nome"
   birth_date: "Data de Nascimento"
   address: "endereço"
   complement: "Complemento"
-  phone: "Teledone"
+  phone: "Telefone"
   cell_phone: "Celular"
   marital_status: "Estado Civil"
   conjugate: "Conjuge"
@@ -27,7 +26,6 @@
   dizymist: "É DIZIMISTA?"
   affiliated_missions: "É FILIADO A MISSÕES"
   description: "SE NÃO TEM CARGOS NA IGREJA, QUAIS AS ATIVIDADES QUE PARTICIPA?"
-  
   activerecord:
     models:
       member: Membros
@@ -38,7 +36,7 @@
         birth_date: "DATA DE NASCIMENTO"
         address: "ENDEREÇO"
         complement: "COMPLEMENTO"
-        phone: "TELEDONE"
+        phone: "TELEFONE"
         cell_phone: "CELULAR"
         marital_status: "ESTADO CIVIL"
         conjugate: "CONJUGE"

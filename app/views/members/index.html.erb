@@ -21,14 +21,14 @@
   <div class="carteira">
     <div class="media">
       <div class="media-left media-middle">
-         <img media-object src="http://via.placeholder.com/80x80" alt="foto" class="img-circle">
+         <%= image_tag member.avatar.url(:thumb), class: 'img-circle' %>
       </div>
       <div class="media-body">
         <h4 class="media-heading"><%= member.name %></h4>
         <strong><%=t :id %>: </strong> <%= "%.4d" % member.id %> <br>
-        <strong><%=t :role %></strong> <%= member.role %> <br>
-        <strong><%=t :congregation %></strong> <%= member.congregation %> <br>
-        <strong><%=t :phone %></strong> <%= member.cell_phone %> <br>
+        <strong><%=t :role %>:</strong> <%= member.role %> <br>
+        <strong><%=t :congregation %>:</strong> <%= member.congregation %> <br>
+        <strong><%=t :phone %>:</strong> <%= member.cell_phone %> <br>
         <p>
           <div class="btn-group btn-group-xs" role="group">
             <%= link_to 'Visualizar', member, class: 'btn btn-primary' %>
