@@ -14,4 +14,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( bootstrap.css
                                                   custom.css
                                                   print.css
-                                                  notify.js )
+                                                  notify.js
+                                                  bootstrap.js
+                                                  html2canvas.min.js
+                                                  jspdf.min.js
+                                                  scripts.js
+                                                  jquery.js)
