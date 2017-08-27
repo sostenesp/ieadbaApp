@@ -26,7 +26,7 @@
          <%= image_tag member.avatar.url(:thumb), class: 'img-circle' %>
       </div>
       <div class="media-body">
-        <h4 class="media-heading"><%= member.name.upcase %></h4>
+        <h4 class="media-heading"><%= truncate(member.name.upcase, length: 24) %></h4>
         <strong><%= sort_link(@q, :id)%>: </strong> <%= "%.4d" % member.id %> <br>
         <strong><%= sort_link(@q, :role)%>:</strong> <%= member.role %> <br>
         <strong><%= sort_link(@q, :congregation)%>:</strong> <%= member.congregation %> <br>

@@ -17,7 +17,7 @@ body {
 }
 
 .carteira-content {
-	background-image: url("../img/pattern-carteira2.jpg");
+	background-image: url("/assets/pattern-carteira2.jpg");
 	border: 1px solid #999;
 	/*padding: 15px;*/
 }
