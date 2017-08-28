@@ -32,8 +32,10 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
+          <% if user_signed_in? %>
             <li class="active"><%= link_to 'Inicio', members_path %></li>
             <li><%= link_to 'Novo Membro', new_member_path %></li>
+          <% end %> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
