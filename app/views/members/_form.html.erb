@@ -13,18 +13,18 @@
 
   <div class="form-group">
     <div class="col-sm-8">
-      <%= form.label :name %>
+      <%= form.label :name %>*
       <%= form.text_field :name, id: :member_name, class: 'form-control', placeholder: 'NOME COMPLETO' %>
     </div>
     <div class="col-sm-4">
-      <%= form.label :birth_date %>
+      <%= form.label :birth_date %>*
       <%= form.text_field :birth_date, id: :member_birth_date, class: 'form-control', placeholder: 'DD/MM/AAAA' %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="col-sm-12">
-      <%= form.label :address %>
+      <%= form.label :address %>*
        <%= form.text_field :address, id: :member_address, class: 'form-control', placeholder: 'ENDEREÇO' %>
     </div>
   </div>
@@ -46,11 +46,11 @@
 
   <div class="form-group">
     <div class="col-sm-3">
-      <%= form.label :marital_status %>
+      <%= form.label :marital_status %>*
       <%= form.select :marital_status, [['Solteiro'], ['Casado'], ['Divorciado'], ['Viúvo']], {}, {class: 'form-control'} %>
     </div>
     <div class="col-sm-3">
-      <%= form.label :sex %>
+      <%= form.label :sex %>*
       <%= form.select :sex, [['Masculino'], ['Feminino']], {}, {class: 'form-control'} %>
     </div>
     <div class="col-sm-6">
@@ -61,11 +61,11 @@
 
   <div class="form-group">
     <div class="col-sm-4">
-      <%= form.label :cpf %>
+      <%= form.label :cpf %>*
       <%= form.text_field :cpf, id: :member_cpf, class: 'form-control', placeholder: 'CPF' %>
     </div>
     <div class="col-sm-4">
-      <%= form.label :rg %>
+      <%= form.label :rg %>*
       <%= form.text_field :rg, id: :member_rg, class: 'form-control', placeholder: 'RG' %>
     </div>
     <div class="col-sm-4">
@@ -83,12 +83,12 @@
 
   <div class="form-group">
     <div class="col-sm-3">
-      <%= form.label :member %>
+      <%= form.label :member %>*
       <%= form.select :member, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
     </div>
     <div class="col-sm-3">
       <div class="clearfix"></div>
-      <%= form.label :congregated %>
+      <%= form.label :congregated %>*
       <%= form.select :congregated, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
      </div>
      <div class="col-sm-6">
@@ -99,11 +99,11 @@
 
   <div class="form-group">
     <div class="col-sm-8">
-      <%= form.label :role %>
+      <%= form.label :role %>*
       <%= form.select :role, [['Evangelista'], ['Diácono'], ['Membro'], ['Pastor'], ['Presbítero']], {}, {class: 'form-control'} %>
     </div>
     <div class="col-sm-4">
-      <%= form.label :ebd %>
+      <%= form.label :ebd %>*
       <div class="clearfix"></div>
       <%= form.select :ebd, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
     </div>
@@ -111,7 +111,7 @@
 
   <div class="form-group">
     <div class="col-sm-5">
-      <%= form.label :baptized %>
+      <%= form.label :baptized %>*
       <div class="clearfix"></div>
       <%= form.select :baptized, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
     </div>
@@ -123,22 +123,22 @@
 
 <div class="form-group">
     <div class="col-sm-6">
-      <%= form.label :father_name %>
+      <%= form.label :father_name %>*
       <%= form.text_field :father_name, id: :member_father_name, class: 'form-control', placeholder: 'FILIAÇÃO' %>
     </div>
     <div class="col-sm-6">
-      <%= form.label :mother_name %>
+      <%= form.label :mother_name %>*
       <%= form.text_field :mother_name, id: :member_mother_name, class: 'form-control', placeholder: 'FILIAÇÃO' %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="col-sm-9">
-      <%= form.label :congregation %>
+      <%= form.label :congregation %>*
       <%= form.select :congregation, [['Templo Central'], ['Buenos Aires'], ['Mocambinho'], ['Santa Sofia'], ['Vila Cristalina'], ['Sub. Cong. Real Copagre'], ['Sub. Cong. Bom Jesus']], {}, {class: 'form-control'} %>
     </div>
     <div class="col-sm-3">
-      <%= form.label :dizymist %>
+      <%= form.label :dizymist %>*
       <div class="clearfix"></div>
       <%= form.select :dizymist, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
     </div>
@@ -146,7 +146,7 @@
 
   <div class="form-group">
     <div class="col-sm-3">
-      <%= form.label :affiliated_missions %>
+      <%= form.label :affiliated_missions %>*
       <div class="clearfix"></div>
       <%= form.select :affiliated_missions, [['SIM'], ['NÃO']], {}, {class: 'form-control'} %>
       
