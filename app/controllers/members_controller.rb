@@ -6,12 +6,13 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
     @q = Member.ransack(params[:q])
-    @members = @q.result(distinct: true).paginate(:page => params[:page], :per_page => 10)
+    @members = @q.result(distinct: true).paginate(:page => params[:page], :per_page => 10).order("id DESC")
   end
 
   # GET /members/1
   # GET /members/1.json
   def show
+    render :layout => 'my_layout'
   end
 
   # GET /members/new

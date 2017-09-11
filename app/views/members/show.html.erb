@@ -1,134 +1,188 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @member.name %>
-</p>
+ <!-- carteira -->
+      <div class="row" style="margin-bottom: 10px">
 
-<p>
-  <strong>Birth date:</strong>
-  <%= @member.birth_date %>
-</p>
+        <div class="col-md-6 col-print-6">
+          <div class="carteira-print">
 
-<p>
-  <strong>Address:</strong>
-  <%= @member.address %>
-</p>
+            <div class="carteira-content">
 
-<p>
-  <strong>Complement:</strong>
-  <%= @member.complement %>
-</p>
+              <div class="carteira-header col-md-12 col-print-12" style="margin-bottom: 15px;">
+                <span>CARTEIRA DE MEMBRO</span>
+              </div>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @member.phone %>
-</p>
+              <div class="col-md-3 col-print-3">
+                <img class="logo" src="/assets/logo.png" height="50" alt="logo">
+              </div>
+              <div class="col-md-9 col-print-9 text-center">
+                <h5>IGREJA EVANGÉLICA ASSEMBLÉIA DE DEUS</h5>
+                <span class="dados-igreja">Avenida Duque de Caxias, 4360 - Água Mineral - Teresina-PI Fone: 3221-9260 Fax: 3221-1658</span>
+              </div>
 
-<p>
-  <strong>Cell phone:</strong>
-  <%= @member.cell_phone %>
-</p>
+              <div class="clearfix"></div>
 
-<p>
-  <strong>Marital status:</strong>
-  <%= @member.marital_status %>
-</p>
+              <div class="col-md-8 col-print-8">
+                <div class="row" style="margin-bottom: 7px;">
+                  <div class="col-md-12 col-print-12 no-padding-right">
+                     <div class="titulo-quadro">Nome:</div>
+                    <div class="box">
+                     <span><%= @member.name.upcase %></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" style="margin-bottom: 8px;">
+                  <div class="col-md-6 col-print-6 no-padding-right">
+                    <div class="titulo-quadro">Função:</div>
+                    <div class="box">
+                      <span><%= @member.role.upcase %></span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-print-6 no-padding-right">
+                    <div class="titulo-quadro">Data Nasc.:</div>
+                    <div class="box">
+                      <span><%= @member.birth_date %></span>
+                    </div>
+                  </div>
+                </div>
 
-<p>
-  <strong>Conjugate:</strong>
-  <%= @member.conjugate %>
-</p>
+                <div class="row">
+                  <div class="col-md-6 col-print-6 no-padding-right">
+                    <div class="titulo-quadro">Congregação:</div>
+                    <div class="box">
+                     <span><%= @member.congregation.upcase %></span>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-print-6 no-padding-right">
+                    <div class="titulo-quadro">Data Batimso:</div>
+                    <div class="box">
+                      <span><%= @member.water_baptism_date %></span>
+                    </div>
+                  </div>
+                </div>
 
-<p>
-  <strong>Sex:</strong>
-  <%= @member.sex %>
-</p>
+                  <div class="row" style="margin-bottom: 4px;">
+                    <div class="col-md-12 col-print-12 no-padding-right">
+                      <span style="font-size: 7px; font-style: italic;">Válido em todo território nacional.</span>
+                    </div>
+                  </div>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @member.cpf %>
-</p>
+              </div>
+              <div class="col-md-4 col-print-4">
+                 
+                 <%= image_tag @member.avatar.url(:photo), class: 'img-thumbnail' %>
+                 
+              </div>
 
-<p>
-  <strong>Rg:</strong>
-  <%= @member.rg %>
-</p>
+              <div class="clearfix"></div>
 
-<p>
-  <strong>Profession:</strong>
-  <%= @member.profession %>
-</p>
+            </div>
 
-<p>
-  <strong>Workplace:</strong>
-  <%= @member.workplace %>
-</p>
+          </div>
+        </div>
 
-<p>
-  <strong>Member:</strong>
-  <%= @member.member %>
-</p>
+        <div class="col-md-6 col-print-6">
+          <div class="carteira-print">
 
-<p>
-  <strong>Congregated:</strong>
-  <%= @member.congregated %>
-</p>
+            <div class="carteira-content">
 
-<p>
-  <strong>Water baptism date:</strong>
-  <%= @member.water_baptism_date %>
-</p>
+              <div class="carteira-header col-md-12 col-print-12">
+                <span>CARTEIRA DE MEMBRO</span>
+              </div>
 
-<p>
-  <strong>Role:</strong>
-  <%= @member.role %>
-</p>
+              <div class="col-md-12 col-print-12" style="margin-top: 5px;">
 
-<p>
-  <strong>Ebd:</strong>
-  <%= @member.ebd %>
-</p>
+              <div class="row">
+                <div class="col-md-8 col-print-8 no-padding-right">
+                  <div class="titulo-quadro">Filiação:</div>
+                  <div class="box">
+                    <span><%= @member.father_name.upcase %></span>
+                  </div>
+                  <div class="box">
+                    <span><%= @member.mother_name.upcase %></span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-print-4">
+                  <div class="titulo-quadro">Batismo E. Santo:</div>
+                  <div class="box">
+                    <span><%= @member.birth_date %></span>
+                  </div>
+                </div>
+              </div>
 
-<p>
-  <strong>Baptized:</strong>
-  <%= @member.baptized %>
-</p>
+              <div class="row">
+                <div class="col-md-4 col-print-4 no-padding-right">
+                  <div class="titulo-quadro">Naturalidade:</div>
+                  <div class="box">
+                    <span>PIAUIENSE</span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-print-4 no-padding-right">
+                  <div class="titulo-quadro">CPF:</div>
+                  <div class="box">
+                    <span><%= @member.cpf %></span>
+                  </div>
+                </div>
+                <div class="col-md-4 col-print-4">
+                  <div class="titulo-quadro">RG:</div>
+                  <div class="box">
+                    <span><%= @member.rg %></span>
+                  </div>
+                </div>
+              </div>
 
-<p>
-  <strong>Date baptism:</strong>
-  <%= @member.date_baptism %>
-</p>
+              <div class="row">
+                <div class="col-md-9 col-print-9 no-padding-right">
+                  <div class="titulo-quadro">Endereço:</div>
+                  <div class="box">
+                    <span><%= @member.address %></span>
+                  </div>
+                </div>
+                <div class="col-md-3 col-print-3">
+                  <div class="titulo-quadro">Número:</div>
+                  <div class="box">
+                    <span><%= "%.4d" % @member.id %></span>
+                  </div>
+                </div>
+              </div>
 
-<p>
-  <strong>Father name:</strong>
-  <%= @member.father_name %>
-</p>
+              <div class="row">
+                <div class="col-md-5 col-print-5 no-padding-right">
+                  <div class="titulo-quadro">Bairro:</div>
+                  <div class="box">
+                    <span>MEMORARE</span>
+                  </div>
+                </div>
+                <div class="col-md-7 col-print-7">
+                </div>
+              </div>
 
-<p>
-  <strong>Mother name:</strong>
-  <%= @member.mother_name %>
-</p>
+              <div class="row">
+                <div class="col-md-6 col-print-6 no-padding-right">
+                  <span class="data">Teresina, <%= Time.now.strftime("%d/%m/%y as %H:%M") %></span>
+                </div>
+                <div class="col-md-6 col-print-6 text-center">
+                  <span class="pastor">Antonio Rodrigues de Santana</span><br>
+                  <span class="pastor-cargo">Pastor Presidente</span>
+                </div>
+              </div>
 
-<p>
-  <strong>Congregation:</strong>
-  <%= @member.congregation %>
-</p>
+              <div class="row">
+                <div class="col-md-12 col-print-12 text-center" style="margin-bottom: -20px;">
+                  <span class="footer">Este documento é intransferível. Seu titular somente poderá portá-la enquanto proceder em conformidade com os princípios da</span><br><span class="footer2">Palavra de Deus. Quebrado o vínculo, compromete-se a devolvê-la a Secretaria da Igreja.
+                  </span>
+                </div>
+              </div>
 
-<p>
-  <strong>Dizymist:</strong>
-  <%= @member.dizymist %>
-</p>
 
-<p>
-  <strong>Affiliated missions:</strong>
-  <%= @member.affiliated_missions %>
-</p>
+              </div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @member.description %>
-</p>
+              <div class="clearfix"></div>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- /carteira -->
