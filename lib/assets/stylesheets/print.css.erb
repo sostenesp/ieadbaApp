@@ -14,10 +14,14 @@ body {
 .carteira-print {
 	padding: 10px;
 	border: 1px solid #999;
+	background: transparent;
+	background-image: url(<%= asset_path 'pattern2.jpg' %>);
+	position: relative;
+	z-index: 999;
 }
 
 .carteira-content {
-	background-image: url(<%= asset_path 'pattern-carteira2.jpg' %>);
+	background-image: url(<%= asset_path 'pattern-carteira2.jpg' %>) !important;
 	border: 1px solid #999;
 	/*padding: 15px;*/
 }
@@ -47,13 +51,13 @@ body {
 .carteira-header {
 	text-align: center;
 	background-color: rgba(0, 18, 178, 0.5);
-	padding: 3px;
+	padding: 0px;
 	color: #fff;
 	font-weight: bold;
 }
 .carteira-header span {
 	color: #fff;
-	font-size: 9px;
+	font-size: 6px;
 	position: relative;
   top: -2px;
 }
@@ -64,10 +68,11 @@ body {
 
 .box {
 	padding: 2px;
-	background: #fff;
+	/*background: #fff;*/
 	border: 1px solid #999;
 	font-size: 8px;
 	margin: 2px 0;
+	z-index: -1;
 }
 .box span {
 	font-weight: bold;
@@ -112,6 +117,13 @@ body {
 	font-weight: bold;
 }
 
+.pastor-assinatura {
+	position: absolute;
+	height: 40px;
+	top: -20px;
+	left: 70px;
+}
+
 .footer {
 	font-size: 5px;
 	font-style: italic;
@@ -134,6 +146,8 @@ body {
 
 /*CSS para impressão*/
 @media print {
+
+	* {-webkit-print-color-adjust:exact;}
 
 	@page {
 		margin: 1cm;
@@ -188,12 +202,22 @@ body {
 	.col-print-11{width:92%; float:left;}
 	.col-print-12{width:100%; float:left;}
 
+	.carteira-print {
+		padding: 10px !important;
+		border: 1px solid #999 !important;
+		/*position: relative;*/
+		z-index: 999 !important;
+		background-image: url(<%= asset_path 'pattern2.jpg' %>) !important;
+		-webkit-print-color-adjust: exact;
+	}
+
 	.carteira-content {
 		background-image: url(<%= asset_path 'pattern-carteira2.jpg' %>) !important;
 		-webkit-print-color-adjust: exact;
 	}
 	.carteira-header {
 		background-color: rgba(0, 18, 178, 0.5) !important;
+		z-index: 999 !important;
 		-webkit-print-color-adjust: exact;
 	}
 	.carteira-header span {
@@ -201,8 +225,8 @@ body {
 		-webkit-print-color-adjust: exact;
 	}
 	.box {
-		background-color: #fff !important;
-		-webkit-print-color-adjust: exact;
+		/*background-color: #fff !important;*/
+		/*-webkit-print-color-adjust: exact;*/
 	}
 
 	.img-thumbnail {
@@ -212,5 +236,10 @@ body {
 	.btn {
 		display: none;
 	}
+
+	@page {
+    size: auto;   /* auto is the initial value */
+    margin: 20px;  /* this affects the margin in the printer settings */
+  }
 
 }
