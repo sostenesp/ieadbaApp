@@ -2,32 +2,26 @@
 
  <!-- carteira -->
       <div class="row" style="margin-bottom: 10px">
-
         <div class="col-md-6 col-print-6">
           <div class="carteira-print">
-
             <div class="carteira-content">
-
               <div class="carteira-header col-md-12 col-print-12" style="margin-bottom: 15px;">
                 <span>CARTEIRA DE MEMBRO</span>
               </div>
-
               <div class="col-md-3 col-print-3">
                 <%= image_tag("logo.png", class: "logo", height: "50", alt: "logo") %>
               </div>
               <div class="col-md-9 col-print-9 text-center">
                 <h5>IGREJA EVANGÉLICA ASSEMBLÉIA DE DEUS</h5>
-                <span class="dados-igreja">Avenida Duque de Caxias, 4360 - Água Mineral - Teresina-PI Fone: 3221-9260 Fax: 3221-1658</span>
+                <span class="dados-igreja">Av Duque de Caxias, 4360 - Água Mineral - Teresina-PI Fone: 3221-9260 | 3221-1658</span>
               </div>
-
               <div class="clearfix"></div>
-
               <div class="col-md-8 col-print-8">
                 <div class="row" style="margin-bottom: 7px;">
                   <div class="col-md-12 col-print-12 no-padding-right">
                      <div class="titulo-quadro">Nome:</div>
                     <div class="box">
-                     <span><%= @member.name.upcase %></span>
+                     <span><%= truncate(@member.name.upcase, length: 54) %></span>
                     </div>
                   </div>
                 </div>
@@ -56,7 +50,11 @@
                   <div class="col-md-6 col-print-6 no-padding-right">
                     <div class="titulo-quadro">Data Batimso:</div>
                     <div class="box">
-                      <span><%= @member.water_baptism_date %></span>
+                      <% if @member.water_baptism_date? %>
+                        <span><%= @member.water_baptism_date %></span>
+                      <% else %>
+                        <span>---</span>
+                      <% end %>
                     </div>
                   </div>
                 </div>
@@ -66,16 +64,11 @@
                       <span style="font-size: 7px; font-style: italic;">Válido em todo território nacional.</span>
                     </div>
                   </div>
-
               </div>
               <div class="col-md-4 col-print-4">
-                 
                  <%= image_tag @member.avatar.url(:photo), class: 'img-thumbnail' %>
-                 
               </div>
-
               <div class="clearfix"></div>
-
             </div>
 
           </div>
@@ -96,16 +89,20 @@
                 <div class="col-md-8 col-print-8 no-padding-right">
                   <div class="titulo-quadro">Filiação:</div>
                   <div class="box">
-                    <span><%= @member.father_name.upcase %></span>
+                    <span><%= truncate(@member.father_name.upcase, length: 54) %></span>
                   </div>
                   <div class="box">
-                    <span><%= @member.mother_name.upcase %></span>
+                    <span><%= truncate(@member.mother_name.upcase, length: 54) %></span>
                   </div>
                 </div>
                 <div class="col-md-4 col-print-4">
                   <div class="titulo-quadro">Batismo E. Santo:</div>
                   <div class="box">
-                    <span><%= @member.birth_date %></span>
+                    <% if @member.date_baptism? %>
+                      <span><%= @member.date_baptism %></span>
+                    <% else %>
+                      <span>---</span>
+                    <% end %>
                   </div>
                 </div>
               </div>

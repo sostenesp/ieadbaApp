@@ -52,6 +52,5 @@ gem "paperclip", "~> 5.0.0"
 gem 'ransack'
 gem 'will_paginate-bootstrap'
 gem 'devise'
-gem 'pdfkit'
-gem 'render_anywhere'
+gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

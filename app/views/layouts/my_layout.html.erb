@@ -8,10 +8,12 @@
 
     <title>IEADBA</title>
 
-    <!-- css -->
-    <%= stylesheet_link_tag 'bootstrap' %>
-    <%= stylesheet_link_tag 'print' %>
-    
+    <!-- css -->   
+    <%= wicked_pdf_stylesheet_link_tag "bootstrap" -%>
+    <%= wicked_pdf_stylesheet_link_tag "print" -%>
+    <style type='text/css'>
+    <%= Rails.application.assets['print'].to_s  %>
+    </style>
     <!-- js -->
     <!-- <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
