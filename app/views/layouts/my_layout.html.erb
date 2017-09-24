@@ -9,18 +9,247 @@
     <title>IEADBA</title>
 
     <!-- css -->   
-    <%= wicked_pdf_stylesheet_link_tag "bootstrap" -%>
-    <%= wicked_pdf_stylesheet_link_tag "print" -%>
-    <style type='text/css'>
-    <%= Rails.application.assets['print'].to_s  %>
-    </style>
-    <!-- js -->
-    <!-- <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jspdf.min.js"></script>
-    <script src="js/html2canvas.min.js"></script>
-    <script src="js/scripts.js"></script> -->
+<%= wicked_pdf_stylesheet_link_tag "bootstrap" -%>
 
+<style type='text/css'>
+  /* print */
+
+  body {
+    font: 12pt Arial, "Times New Roman", Times, serif;
+  }
+
+  .container-print {
+    width: 100%;
+    max-width: 841.89px;
+    margin: 0;
+    float: none !important;
+  }
+
+  .carteira-print {
+    padding: 10px;
+    border: 1px solid #999;
+    background: transparent;
+    background-image: url(<%= asset_path 'pattern2.jpg' %>);
+    position: relative;
+    z-index: 999;
+  }
+
+  .carteira-content {
+    background-image: url(<%= asset_path 'pattern-carteira2.jpg' %>) !important;
+    border: 1px solid #999;
+    /*padding: 15px;*/
+  }
+  .carteira-content h5 {
+    font-size: 9px;
+    font-weight: bold;
+    padding: 0;
+    font-weight: bold;
+    padding: 17px 0 0 0;
+    margin: 0;
+  }
+
+  .carteira-content .dados-igreja {
+    font-size: 6px;
+    position: relative;
+    top: -5px;
+  }
+
+  .carteira-header span {
+    font-size: 14px;
+  }
+  .carteira-content .logo {
+    height: 50px;
+    padding: 5px 0;
+  }
+
+  .carteira-header {
+    text-align: center;
+    background-color: rgba(0, 18, 178, 0.5);
+    padding: 0px;
+    color: #fff;
+    font-weight: bold;
+  }
+  .carteira-header span {
+    color: #fff;
+    font-size: 6px;
+    position: relative;
+    top: -2px;
+  }
+
+  .carteira-foto {
+    width:
+  }
+
+  .box {
+    padding: 2px;
+    /*background: #fff;*/
+    border: 1px solid #999;
+    font-size: 8px;
+    margin: 2px 0;
+    z-index: -1;
+  }
+  .box span {
+    font-weight: bold;
+    font-size: 7px;
+  }
+
+  .img-thumbnail {
+    margin-top: 10px;
+  }
+
+  .frente {
+  /*  border: 1px solid #ccc;
+    height: 150px;
+    padding: 5px;*/
+  }
+
+  .no-padding-right {
+    padding-right: 0;
+  }
+
+  .titulo-quadro {
+    font-size: 8px;
+    /*font-weight: bold;*/
+    top: 2px;
+    position: relative;
+    font-style: italic;
+  }
+
+  .data {
+    font-size: 8px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .pastor-cargo {
+    font-size: 8px;
+    font-style: italic;
+    position: relative;
+    top: -8px;
+  }
+  .pastor {
+    font-size: 8px;
+    font-weight: bold;
+  }
+
+  .pastor-assinatura {
+    position: absolute;
+    height: 40px;
+    top: -20px;
+    left: 70px;
+  }
+
+  .footer {
+    font-size: 5px;
+    font-style: italic;
+    position: relative;
+    top: -15px;
+  }
+
+  .footer2 {
+    font-size: 5px;
+    font-style: italic;
+    position: relative;
+    top: -26px;
+  }
+
+  /*.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }*/
+
+
+  /*CSS para impressão*/
+  @media print {
+
+    * {-webkit-print-color-adjust:exact;}
+
+    @page {
+      margin: 1cm;
+    }
+
+    * {
+      background:transparent !important;
+      color:#000 !important;
+      text-shadow:none !important;
+      filter:none !important;
+      -ms-filter:none !important;
+    }
+
+    body {
+      margin:0;
+      padding:0;
+      /*line-height: 1.4em;*/
+      font: 12pt Arial, "Times New Roman", Times, serif;
+      color: #000;
+    }
+
+
+    p {
+      widows: 3;
+      orphans: 3;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* grid */
+    .col-print-1 {width:8%;  float:left;}
+    .col-print-2 {width:16%; float:left;}
+    .col-print-3 {width:25%; float:left;}
+    .col-print-4 {width:33%; float:left;}
+    .col-print-5 {width:42%; float:left;}
+    .col-print-6 {width:50%; float:left;}
+    .col-print-7 {width:58%; float:left;}
+    .col-print-8 {width:66%; float:left;}
+    .col-print-9 {width:75%; float:left;}
+    .col-print-10{width:83%; float:left;}
+    .col-print-11{width:92%; float:left;}
+    .col-print-12{width:100%; float:left;}
+
+    .carteira-print {
+      padding: 10px !important;
+      border: 1px solid #999 !important;
+      /*position: relative;*/
+      z-index: 999 !important;
+      background-image: url(<%= asset_path 'pattern2.jpg' %>) !important;
+      -webkit-print-color-adjust: exact;
+    }
+
+    .carteira-content {
+      background-image: url(<%= asset_path 'pattern-carteira2.jpg' %>) !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .carteira-header {
+      background-color: rgba(0, 18, 178, 0.5) !important;
+      z-index: 999 !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .carteira-header span {
+      color: #fff !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .box {
+      /*background-color: #fff !important;*/
+      /*-webkit-print-color-adjust: exact;*/
+    }
+
+    .img-thumbnail {
+      background-color: #fff !important;
+      -webkit-print-color-adjust: exact;
+    }
+    .btn {
+      display: none;
+    }
+
+    @page {
+      size: auto;   /* auto is the initial value */
+      margin: 20px;  /* this affects the margin in the printer settings */
+    }
+
+  }
+</style>
+    
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn"t work if you view the page via file:// -->
     <!--[if lt IE 9]>

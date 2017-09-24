@@ -26,12 +26,14 @@ tmp/
 .rvmrc
 .ruby-version
 config/database.yml
+config/secrets.yml
 db/schema.rb
 *~
 dep
 server
 public/favicon.ico
 public/system
+public/assets/*
 config/memcached.yml
 .port
 .domain
