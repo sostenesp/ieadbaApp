@@ -22,7 +22,7 @@
     </div>
     <div class="col-sm-4">
       <%= form.label :birth_date %>*
-      <%= form.text_field :birth_date, id: :member_birth_date, class: 'form-control', placeholder: 'DD/MM/AAAA' %>
+      <%= form.text_field :birth_date, id: :member_birth_date, class: 'form-control', type: 'date' %>
     </div>
   </div>
 
@@ -97,7 +97,7 @@
      </div>
      <div class="col-sm-6">
       <%= form.label :water_baptism_date %>
-      <%= form.text_field :water_baptism_date, id: :member_water_baptism_date, class: 'form-control', placeholder: 'DATA DE BATISMO NAS ÁGUAS' %>
+      <%= form.text_field :water_baptism_date, id: :member_water_baptism_date, class: 'form-control', type: 'date' %>
     </div>
   </div>
 
@@ -121,7 +121,7 @@
     </div>
     <div class="col-sm-7">
       <%= form.label :date_baptism %>
-      <%= form.text_field :date_baptism, id: :member_date_baptism, class: 'form-control', placeholder: 'DD/MM/AAAA' %>
+      <%= form.text_field :date_baptism, id: :member_date_baptism, class: 'form-control', type: 'date' %>
     </div>
   </div>
 
